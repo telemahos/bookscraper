@@ -2,8 +2,9 @@
 - pip install scrapy
 - pip3 install "urllib3 <=1.26.15"
 - scrapy startproject bookscraper
-- cd spider -> scrapy genspider bookspider books.tos
+- Create a Spider: cd spiders -> scrapy genspider bookspider books.tos
 crape.com
+- to run the spider -> scrapy crawl bookspider
 - in spiders folder -> pip install ipythom
 - open scrapy.cfg and add -> shell = ipython
 - run -> scrapy shell
@@ -25,4 +26,6 @@ crape.com
   - table_rows[2].css('td::text').get()
 - extracting text from a link with Xpath -> 
     response.xpath('//*[@id="default"]/div[1]/div/ul/li[3]/a/text()').get()
-- 
+- extracting data and save them to a csv or json file ->
+  - scrapy crawl bookspider -O bookdata.csv
+  - scrapy crawl bookspider -O bookdata.json
