@@ -1,6 +1,24 @@
+# Project Scrapy
+Project URL: 
+https://github.com/python-scrapy-playbook/freeCodeCamp-part-7/tree/main
+
+### Start VENV
+- python3 -m venv env
+- source env/bin/activate
+
+### Start MySQL
+- mysql -h localhost -u root -p
+- show databases;
+- use books;
+- show tables;
+- select * from books;
+- drop table books;
+
 ### Scrapy Project
 - pip install scrapy
 - pip3 install "urllib3 <=1.26.15"
+- pip3 install pip==21.3.1 -> to install mysql driver:
+  - pip install mysql mysql-connector-python
 - scrapy startproject bookscraper
 - Create a Spider: cd spiders -> scrapy genspider bookspider books.tos
 crape.com
@@ -29,3 +47,8 @@ crape.com
 - extracting data and save them to a csv or json file ->
   - scrapy crawl bookspider -O bookdata.csv
   - scrapy crawl bookspider -O bookdata.json
+
+
+
+
+##
